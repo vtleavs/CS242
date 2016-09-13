@@ -1,5 +1,41 @@
 Benji Leavitt
-9/6/2016
+9/13/2016
 CS242
 Natasha Bannerjee
 
+The Die class is very straightforward; all methods are one or two lines long,
+and very easy to implement.
+
+The TestDie class implements and tests the Die class in a number of ways.
+
+Methods:
+    -   creates an array of Die objects and initializes them
+    -   displays array to check constructor initializes correctly
+    -   rolls all dice in the array, displaying them as they are rolled
+    -   rechecks dice to make sure getTop works correctly
+    -   averages tops of all dice to make sure the random roll is correct:
+        should be around 3.5
+
+    -   runs a frequency test on a single die rolled for increasing 
+        powers of ten
+        -   creates a single die and initializes it
+        -   rolls die a power of ten times
+        -   counts frequency of each side
+        -   averages the frequencies
+        -   finds the percent difference of each frequency
+        -   averages percent differences (should be around 0)
+
+Notes:
+    I found it interesting when, in running a number of the previously
+    mentioned tests, the average percent differences of the frequencies (which
+    statistically should be centered around 0) were almost always returning
+    negative results.  After a lot of speculation between both me and my peers,
+    we came to the conclusion that because the random double was being
+    truncated, not rounded, the numbers tended to run lower than they would
+    have otherwise.  Essentially the Die class, because of truncation, skews
+    its results to toward the low number, creating a slightly weighted die.
+    While the affects are mostly negligible, it is worth noting that the class
+    is not perfect.  An easy way to mitigate the problem would be to make a 
+    function that rounds the double instead of truncating it, but I feel that
+    probably lies outside the scope of this project.  Also I ran out of time
+    because I am a horrible, horrible procrastinator.
