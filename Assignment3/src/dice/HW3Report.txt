@@ -1,0 +1,13 @@
+Benji Leavitt
+10/21/2016
+CS242
+Natasha Bannerjee
+
+
+The user is able to select a number of sides from the spinner.  Then they 
+are able to say whether the die is loaded or not.  If so, they are able to 
+select a loaded side not exceeding the number of sides from a spinner, as 
+well as a load factor from the slider.
+
+To roll the die, the user must click on the face of the die.  The game then
+begins.

@@ -1,0 +1,41 @@
+Benji Leavitt
+9/27/2016
+CS242
+Natasha Bannerjee
+
+The Die class is very straightforward; all methods are one or two lines long,
+and very easy to implement.
+
+The LoadedDie class took a bit more time, because I had to figure out how
+to load the die.
+
+DiceArray was also very easy to implement.
+
+The TestDice class implements and tests the Die and LoadedDie classs 
+in a number of ways.
+
+Methods:
+    -   runs all the same testing on a single die as the previous iteration to 
+        make sure that the changes to Die have not affected the results
+    -   checks the load factor by rolling the die 10000 times at increments
+        of 10% load factor
+
+Notes:
+    It was not clear exactly what the load factor was supposed to regulate,
+    or at least how it was supposed to regulate it.  I took the assignment as
+    meaning if load factor is 0%, the loaded side appears 0% of the time.  If 
+    I were to do it the other way (load factor 0% means die is fair), I would 
+    change the code:
+
+        int newRoll = (int)rand.nextInt(numSides-1)+1;
+        if(newRoll >= loadedSide)
+            newRoll++;
+        currentTop = newRoll;
+
+    to 
+        
+        int newRoll = super.roll();
+        currentTop = newRoll;
+
+
+    
