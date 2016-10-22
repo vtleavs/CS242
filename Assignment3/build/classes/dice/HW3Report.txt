@@ -11,3 +11,7 @@ well as a load factor from the slider.
 
 To roll the die, the user must click on the face of the die.  The game then
 begins.
+
+
+Kristina looked at my UI, and said that it all looked good, but that she thought
+I should label everything, so I added labels.
